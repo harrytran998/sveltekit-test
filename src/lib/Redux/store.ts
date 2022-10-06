@@ -1,12 +1,13 @@
-import * as pkg from '@reduxjs/toolkit'
-import { promotion } from "./modules/promotion";
+// import * as toolkit from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit'
+import { promotion } from './modules/promotion'
 
-const { configureStore } = pkg;
+// const { configureStore } = toolkit
 
 export const store = configureStore({
-    reducer: {
-        promotion: promotion.reducer,
-    },
+  reducer: {
+    promotion: promotion.reducer,
+  },
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
